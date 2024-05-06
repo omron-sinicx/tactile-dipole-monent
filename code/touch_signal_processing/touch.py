@@ -250,7 +250,7 @@ class TouchSensor:
         vfield_msg = numpy2f32multi(self.vfield)
         
         # publish vector field message.
-        self.publish_vector_field(vfield_msg)
+        # self.publish_vector_field(vfield_msg)
 
         # vd, vr, vh = self.decompose(vfield)
         vd, vr, vh, c_plus, c_minus = self.decompose(vfield)
@@ -523,19 +523,19 @@ class TouchSensor:
         pub_img.publish(imgMsg)
         #rospy.loginfo("data: " + str(np.array(data))) 
 
-    def publish_vector_field(self, vf, stamp = None):
-		# publish force torque
-        vf_msg = vector_field()
-        vf_msg.header = Header()
+    # def publish_vector_field(self, vf, stamp = None):
+	# 	# publish force torque
+    #     vf_msg = vector_field()
+    #     vf_msg.header = Header()
 
-        if stamp is None: 
-            vf_msg.header.stamp = rospy.Time.now()
-        else:
-            vf_msg.header.stamp = stamp
+    #     if stamp is None: 
+    #         vf_msg.header.stamp = rospy.Time.now()
+    #     else:
+    #         vf_msg.header.stamp = stamp
 
-        vf_msg.vector_field = vf
+    #     vf_msg.vector_field = vf
 
-        self.pub_vf.publish(vf_msg)
+    #     self.pub_vf.publish(vf_msg)
 
 
 """(D) AUX FUNCTIONS ------------------------------------------------------------------------"""
