@@ -1,4 +1,4 @@
-# Tactile Dipole Monent
+# Tactile Dipole Moment
 This repository contains 3D design files and code used for the ICRA 2024 paper "An Electromagnetism-Inspired Method for Estimating In-Grasp Torque from Visuotactile Sensors".
 
 Link: https://arxiv.org/abs/2404.15626
